@@ -262,6 +262,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+            z-index: 1;
         }
 
         .hero-section-main::before {
@@ -307,7 +308,7 @@
 
         .hero-description {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: white;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
@@ -426,6 +427,8 @@
         .stats-section {
             background: white;
             padding: 4rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .container {
@@ -476,6 +479,8 @@
         .how-it-works {
             background: #f8f9fa;
             padding: 6rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .section-header {
@@ -557,6 +562,8 @@
         .features-section {
             background: white;
             padding: 6rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .features-grid {
@@ -603,6 +610,8 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 6rem 0;
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
 
         .cta-content h2 {
@@ -626,6 +635,8 @@
             background: #2c3e50;
             color: white;
             padding: 4rem 0 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         .footer-content {
@@ -767,14 +778,14 @@
             observer.observe(el);
         });
 
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero-section-main');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
+        // Parallax effect for hero section (disabled to fix positioning)
+        // window.addEventListener('scroll', () => {
+        //     const scrolled = window.pageYOffset;
+        //     const hero = document.querySelector('.hero-section-main');
+        //     if (hero) {
+        //         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        //     }
+        // });
     </script>
 </body>
 </html>
